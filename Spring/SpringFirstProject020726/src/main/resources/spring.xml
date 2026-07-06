@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="org.example.Student" scope="prototype">
+<!--        <property name="course" ref="course"/>-->
+<!--        <property name="trainer" ref="trainer"/>-->
+
+<!--        <property name="name" value="Vishnu" />-->
+<!--        <property name="city" value="Tindivanam" />-->
+<!--        <property name="age" value="23" />-->
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean id="address" class="org.example.Address">
+        <property name="city" value="Tindivanam"/>
+    </bean>
+
+    <bean id="teacher" class="org.example.Teacher"/>
+    <bean id="trainer" class="org.example.Trainer"/>
+    <bean id="course" class="org.example.Course"/>
+
+</beans>
