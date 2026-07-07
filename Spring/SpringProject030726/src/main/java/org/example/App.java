@@ -7,9 +7,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        Student stud = SpringConfig().getBean("student",Student.class);
+//        Notification noti = SpringConfig().getBean("notification",Notification.class);
+//
+//        noti.notifyUser();
 
-        stud.display();
+
+
     }
 
     public static ApplicationContext SpringConfig(){

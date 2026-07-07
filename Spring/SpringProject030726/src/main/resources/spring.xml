@@ -4,16 +4,22 @@
        xsi:schemaLocation="
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="address" class="org.example.Address">
-        <constructor-arg value="Tindivanam"/>
+
+<!--    <bean id="address" class="org.example.Address">-->
+<!--        <constructor-arg type="int" value="43"/>-->
+<!--        <constructor-arg type="java.lang.String" value="Tindivanam"/>-->
+<!--        <constructor-arg type="int" value="604001"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="student" class="org.example.Student">-->
+<!--&lt;!&ndash;        <constructor-arg value="Vishnu"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg value="JFS"/>&ndash;&gt;-->
+<!--        <constructor-arg ref="address"/>-->
+<!--    </bean>-->
+    <bean id="emailMessage" class="org.example.EmailMessage"/>
+    <bean id="smsMessage" class="org.example.SmsMessage"/>
+    <bean id="notification" class="org.example.Notification">
+<!--        <property name="messageService" ref="emailMessage"/>-->
+        <property name="messageService" ref="smsMessage"/>
     </bean>
-    <bean id="student" class="org.example.Student">
-<!--        <constructor-arg value="Vishnu"/>-->
-<!--        <constructor-arg value="JFS"/>-->
-
-        <constructor-arg ref="address"/>
-    </bean>
-
-
-
 </beans>

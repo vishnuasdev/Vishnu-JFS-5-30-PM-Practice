@@ -16,6 +16,8 @@ public class Student {
 //        System.out.println("Name: "+ name);
 //        System.out.println("Course: "+ course);
 
-        System.out.println("City: "+ address.getCity());
+//        System.out.println("City: "+ address.getCity());
+//        System.out.println("Pincode: "+ address.getPincode());
+        address.display();
     }
 }

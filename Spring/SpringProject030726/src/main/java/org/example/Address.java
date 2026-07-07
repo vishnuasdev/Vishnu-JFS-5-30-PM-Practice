@@ -2,14 +2,20 @@ package org.example;
 
 public class Address {
 
+    private int no;
     private String city;
+    private int pincode;
 
-    public Address(String city){
+    public Address(int no, String city, int pincode){
+        this.no = no;
         this.city = city;
+        this.pincode = pincode;
     }
 
-    public String getCity(){
-        return city;
+    public void display(){
+        System.out.println("Door No: " + no);
+        System.out.println("City: "+ city);
+        System.out.println("Pincode: " + pincode);
     }
 
 
